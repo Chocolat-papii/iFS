@@ -1,14 +1,9 @@
-
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
-    background-color: #333333;
+    background-color: #474747;
+    
 }
 
 footer {
@@ -23,7 +18,8 @@ footer {
 nav {
     margin: -16px 0;
     padding: 0;
-    background-color: #fedc17;
+    background-color: none;
+    position: relative;
 }
 
 
@@ -46,14 +42,16 @@ nav {
     padding-left: 15px;
 }
 
-.logo a {
-    text-decoration: none;
-    color: #fe2029;
-    padding: 4px 7px;
-    font-size: 35px;
-    font-weight: bold;
-
+.logo a img {
+    height: 40px;
+    margin: 6px 2px 0 0;
+    padding: 0;
+    align-items: center;
 }
+
+
+
+
 
 .menu li a { 
     display: inline-block;
@@ -62,17 +60,26 @@ nav {
     padding: 4px 7px;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 
 a.active, .menu li a:hover {
-    font-weight: bold;
-    transform: scale 0.5s ease;
+    
+    padding: 4px 7px;
     border-bottom: solid 2px #fe2029;
 }
 
 /* menu icons ------------------------------------*/
+
+
+i {
+    color: #fedc17;
+}
+
+ .open-menu i, .close-menu i {
+    color: #fe2029;
+}
 
 .open-menu, .close-menu {
     position: absolute;
@@ -89,8 +96,8 @@ a.active, .menu li a:hover {
     transform: translateY(-50%);
 }
 .close-menu {
-    top: 25px;
-    right: 20px;
+    top: 37px;
+    right: 22px;
     transform: translateY(-50%);
 }
 
@@ -102,14 +109,18 @@ a.active, .menu li a:hover {
     nav .menu li a {
         font-size: 24px;
     }
+
+    .hero-content h1, .hero-content p {
+        font-size: 25px;
+    }  
+
     
 }
 
 @media (max-width: 768px){
-    .logo a {
+    .logo a img{
     font-size: 26px;
     left: 8px;
-   
     }
 
 
@@ -120,7 +131,7 @@ a.active, .menu li a:hover {
         position: fixed;
         width: 80%;
         height: 60vh;
-        background-color: #fedc17;
+        background-color: #fedb17ee;
         top: 0;
         right: -100%;
         z-index: 100;
@@ -152,6 +163,8 @@ a.active, .menu li a:hover {
         right: 0;
         
     }
+
+    
 }
 
 
@@ -166,7 +179,7 @@ a.active, .menu li a:hover {
     background-size: cover;
     position: relative;
     width: auto;
-    height: 496px;
+    height: 90vh;
     margin: 0;
     padding: 0;
     z-index: -1;
@@ -182,11 +195,10 @@ a.active, .menu li a:hover {
 }
 
 .hero-content h1 {
-    font-size: 30px;
+    font-size: 2.5rem;
     font-family: 'Merriweather', serif;
     color: #fe2029;
     text-align: center;
-    letter-spacing: 4px;
     top: 25%;
     left: 10%;
     right: 10%;
@@ -201,7 +213,7 @@ a.active, .menu li a:hover {
     color: #fedc17;
     text-align: center;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 1.8rem;
     top: 35%;
     left: 35%;
     right: 35%;
@@ -224,7 +236,7 @@ a.active, .menu li a:hover {
     text-decoration: none;
     color: #fe2029;
 }
-/*  slogan ------------------------------------ */
+/*  slogan ---------- */
 
 .hero .slogan p {
     color: white;
@@ -241,7 +253,42 @@ a.active, .menu li a:hover {
     font-weight: bold;
     z-index: 100;
     
+}
 
+.hero2 {
+    background-image: url('../media/hero2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: auto;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+}
+
+.hero2 h1, .hero3 h1 {
+    font-size: 2rem;
+    text-align: left;
+    color: #fe2029;
+    padding: 10px;
+    margin: 8px;
+}
+
+.hero3 {
+    background-image: url('../media/hero2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.hero3 div {
+    padding: 20px;
 }
 
 /*  button ------------------------------------*/
@@ -252,12 +299,12 @@ a.active, .menu li a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
     background-color: #fedc17;
     border: none;
     border-radius: 6px;
     text-align: center;
     text-transform: uppercase;
+    
 
 }
 
@@ -270,6 +317,7 @@ a.active, .menu li a:hover {
 .button:hover {
     font-weight: bold;
     cursor: pointer;
+    transform: scale(1.05);
 
 }
 
@@ -278,8 +326,8 @@ a.active, .menu li a:hover {
 /*  section ------------------------------------*/
 
 section {
-    margin: 40px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 50px 20px;
 }
 
 
@@ -291,6 +339,9 @@ section h2, h3, h4 {
 
 }
 
+section h2 {
+    font-size: 1.8rem;
+}
 
 section p {
     text-align: center;
@@ -443,8 +494,9 @@ section .reason {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px;
+    gap: 12px;
     justify-content: center;
+    padding: 50px 0;
 }
 
 
@@ -522,7 +574,7 @@ section .reason {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #d9d9d9;
+    background-color: #d9d9d96d;
 }
 
 .form label {
@@ -561,3 +613,18 @@ section .reason {
     margin-bottom: 15px;
 }
   
+.brief-about p {
+    font-size: 18px;
+}
+
+
+
+.cover {
+    background-color: #00000075;
+}
+
+.reach h4, .reach p {
+    margin: 0;
+    padding: 2px;
+    text-align: left;
+}
