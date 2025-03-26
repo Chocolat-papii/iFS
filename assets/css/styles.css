@@ -1,22 +1,41 @@
-body {
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 0;
-    background-color: #474747;
-    
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
-footer {
-    background-color: #fedc17;
-    color: #333333;
-    margin: 0;
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
+html, body {
+    overflow-x: hidden;
 }
+
+body {
+    color: E0E0E0;
+    background-color: #333; /* Luxury look */
+}
+
+
+
+/* Headings (Bold & Modern) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #fe2029; /* Deep Gold for luxury feel */
+}
+
+
+/* Paragraph & Body Text */
+p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333; /* Soft white for readability */
+}
+
+/* === Navigation === */
 
 nav {
-    margin: -16px 0;
+    margin: 0;
     padding: 0;
     background-color: none;
     position: relative;
@@ -30,7 +49,8 @@ nav {
     align-items: center;
     list-style: none;
     position: relative;
-    padding: 10px;
+    margin: 0;
+    padding: 10px 0;
     
 }
 
@@ -43,14 +63,9 @@ nav {
 }
 
 .logo a img {
-    height: 40px;
-    margin: 6px 2px 0 0;
-    padding: 0;
-    align-items: center;
+    height: 48px;
+    margin-left: 6px;
 }
-
-
-
 
 
 .menu li a { 
@@ -60,7 +75,9 @@ nav {
     padding: 4px 7px;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 2px;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+
 }
 
 
@@ -69,10 +86,6 @@ a.active, .menu li a:hover {
     padding: 4px 7px;
     border-bottom: solid 2px #fe2029;
 }
-
-/* menu icons ------------------------------------*/
-
-
 i {
     color: #fedc17;
 }
@@ -92,7 +105,7 @@ i {
 
 .open-menu {
     top: 53%;
-    right: 20px;
+    right: 8px;
     transform: translateY(-50%);
 }
 .close-menu {
@@ -107,10 +120,10 @@ i {
 
 @media (max-width: 1009px){
     nav .menu li a {
-        font-size: 24px;
+        font-size: 18px;
     }
 
-    .hero-content h1, .hero-content p {
+    .hero-content h2, .hero-content p {
         font-size: 25px;
     }  
 
@@ -119,8 +132,12 @@ i {
 
 @media (max-width: 768px){
     .logo a img{
-    font-size: 26px;
+    font-size: 29px;
     left: 8px;
+    }
+
+    .hide {
+        display: block;
     }
 
 
@@ -163,48 +180,49 @@ i {
         right: 0;
         
     }
-
-    
 }
 
+/* === hero section === */
 
 
-
-
-/* hero section ------------------------------------*/
 .hero {
-    background-image: url('../media/fire-hyd-wall.jpg');
+    background-image: url('../gallery/media/fire-hyd-wall.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     width: auto;
-    height: 90vh;
+    height: 85vh;
     margin: 0;
     padding: 0;
     z-index: -1;
    
 }
+
+
 .hero::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: #333333;
+    background: #282828;
     opacity: 0.6;
 }
 
+.hero-content{
+    display: flex;
+    justify-content: center;
+}
+
 .hero-content h1 {
-    font-size: 2.5rem;
-    font-family: 'Merriweather', serif;
-    color: #fe2029;
+    font-size: 2.4rem;
     text-align: center;
-    top: 25%;
-    left: 10%;
-    right: 10%;
+    top: 40%;
     position: absolute;
     margin: 0;
     padding: 0;
+    left: 10%;
+    right: 10%;
 
 }
 
@@ -214,13 +232,10 @@ i {
     text-align: center;
     letter-spacing: 2px;
     font-size: 1.8rem;
-    top: 35%;
-    left: 35%;
-    right: 35%;
+    top: 25%;
     position: absolute;
-    margin: 2;
     padding: 0;
-    font-weight: bold;
+    margin: 0;
 }
 
 
@@ -236,7 +251,6 @@ i {
     text-decoration: none;
     color: #fe2029;
 }
-/*  slogan ---------- */
 
 .hero .slogan p {
     color: white;
@@ -255,161 +269,31 @@ i {
     
 }
 
-.hero2 {
-    background-image: url('../media/hero2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    width: auto;
-    height: 30vh;
-    margin: 0;
-    padding: 0;
-}
-
-.hero2 h1, .hero3 h1 {
-    font-size: 2rem;
-    text-align: left;
+/* ===== span =====  */
+.intro {
     color: #fe2029;
-    padding: 10px;
-    margin: 8px;
+    font-size: 19px;
 }
 
-.hero3 {
-    background-image: url('../media/hero2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-.hero3 div {
-    padding: 20px;
-}
-
-/*  button ------------------------------------*/
-
-.button {
-    width: 145px;
-    height: 28px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fedc17;
-    border: none;
-    border-radius: 6px;
-    text-align: center;
-    text-transform: uppercase;
-    
-
-}
-
-.button a {
-    text-decoration: none;
-    color: #fe2029;
-
-}
-
-.button:hover {
+.bolder {
+    color: #fedc17;
     font-weight: bold;
-    cursor: pointer;
-    transform: scale(1.05);
-
-}
-
-
-
-/*  section ------------------------------------*/
-
-section {
-    margin: 0;
-    padding: 50px 20px;
-}
-
-
-
-section h2, h3, h4 {
-    color: #fe2029;
-    text-align: center;
-    text-transform: capitalize;
-
-}
-
-section h2 {
-    font-size: 1.8rem;
-}
-
-section p {
-    text-align: center;
-    color: #ffffff;
-    max-width: 900px;
-    padding: 8px;
-    margin: auto;
-    
-
-}
-
-.p2 {
-    text-align: right;
-    margin-left: 20%;
-    margin-right: 0;
-    padding: 4px 8px;
-    color: #ffffff;
-   
-}
-
-.p1 {
-
     text-align: left;
-    margin-right: 20%;
-    margin-left: 0;
-    padding: 4px 8px;
-    color: #ffffff; 
-
 }
 
-/*  services ------------------------------------ */
-
-.overview-services {
-   margin-left: auto;
-    margin-right: auto;
-    padding: 0 auto;
-
-}
+/* ===== why chose us section =====  */
 
 
-.service-box {
-    margin: 4px 1px;
-    padding: 8px 6px;
-    height: 20px;
-    background-color: #d9d9d9;
-    display: inline-block;
-    border-radius: 4px;
-    vertical-align: text-top;
-
-}
-/* why choose us section------ */
-
-section .reason {
-    margin: 20px 0;
-    padding: 0;
-}
-
-.reason {
-    background-image: url('../media/fewall.jpg');
+.hero2 {
+    background-image: url('../gallery/media/fewall.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
     isolation: isolate;
-
 }
 
-.reason::after {
+.hero2::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -418,213 +302,53 @@ section .reason {
     opacity: 0.7;
 }
 
-
-.reason p {
+.hero2 p {
     text-align: left;
 }
-.why-choose-us {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+/* ===== home about section =====  */
+
+.home-about {
+    background-color: #fe2029;
 }
-.bolder {
-    color: #fedc17;
+
+.bg-grey {
+    background: #fafafa;
+    color: #fe2029;
+}
+
+.btnx {
+    background-color: #fedc17;
     font-weight: bold;
-    text-align: left;
+    color: #fe2029;
 }
 
-.overview-services-2, .services{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px;
-    align-items: flex-start;
-    margin: 2px auto;
-}
-    
-
-.service-container {
-    align-items: center;
-    text-align: center;
-    max-width: 260px;
-    height: 160px;
-    padding: 2px;
-    border: #fedc17 2px solid;
-    border-radius: 4px;
-    display: inline-block;
-    vertical-align: text-top;
-
-}
-
-.service-container h4 {
-    text-align: center;
-    padding: 0 8px;
-    margin: 2px;
-
-}
-
-.service-container p {
-    margin: 2px;
-    padding: 2px;
-    display: block;
-    text-align: center;
-
-}
-
-.service-images {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: auto;
-}
-
-.service-images img {
-    max-width: 300px;
-    max-height: 202px;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    
-
-}
-
-/*  brief-about ------------------------------------*/
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    justify-content: center;
-    padding: 50px 0;
-}
-
-
-.container p {
-    vertical-align: middle;
-    max-width: 400px;
-    margin: 0;
-    
-}
-
-.home-images {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: auto;
-}
-
-.home-images img, .container img {
-    max-width: 300px;
-    height: 202px;
-    width: 100%;
-    border-radius: 4px;
-    opacity: 0.9;
-}
-
-
-/*  review ------------------------------------ */
-
-.review {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.review p {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.review-author {
-    font-style: italic;
-    margin: 3px;
-}
-
-.stars {
-    color: grey;
-    margin: 0;
-    padding: 0;
-}
-
-
-/*  contact ------------------------------------ */
-
-@media (max-width: 600px) {
-    .form {
-      padding: 10px;
-    }
-    
-    .form input,
-    .form textarea {
-      font-size: 14px;
-    }
-    
-    .form button {
-      font-size: 14px;
-    }
-  }
-  
-
-.form {
-    max-width: 600px; /* Set max width of the form */
-    margin: 0 auto;   /* Center the form horizontally */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #d9d9d96d;
-}
-
-.form label {
-    display: block;
-    margin-bottom: 5px;
+.btnx:hover {
     font-weight: bold;
-  }
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #7c7c7c7c;
 
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
-
-.form textarea {
-  min-height: 100px; /* Set a minimum height for the textarea */
+.hide {
+    display: none;
 }
 
-.form input:invalid,
-.form textarea:invalid {
-  border-color: #dc3545;
+footer img {
+    height: 200px;
 }
 
-.form input:valid,
-.form textarea:valid {
-  border-color: #28a745;
+footer li {
+    text-decoration: none;
 }
 
-  
-.form .form-group {
-    margin-bottom: 15px;
-}
-  
-.brief-about p {
-    font-size: 18px;
+footer li a {
+    color: #eeeeee;
+    font-weight: 200;
+    
 }
 
-
-
-.cover {
-    background-color: #00000075;
-}
-
-.reach h4, .reach p {
-    margin: 0;
-    padding: 2px;
-    text-align: left;
+.border-right {
+    border-right: 2px solid #2a2a2a;
 }
