@@ -1,0 +1,354 @@
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    color: E0E0E0;
+    background-color: #333; /* Luxury look */
+}
+
+
+
+/* Headings (Bold & Modern) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #fe2029; /* Deep Gold for luxury feel */
+}
+
+
+/* Paragraph & Body Text */
+p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333; /* Soft white for readability */
+}
+
+/* === Navigation === */
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    position: relative;
+}
+
+
+.nav-bar {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 10px 0;
+    
+}
+
+.menu {
+    display: flex;   
+}
+
+.menu li {
+    padding-left: 15px;
+}
+
+.logo a img {
+    height: 48px;
+    margin-left: 6px;
+}
+
+
+.menu li a { 
+    display: inline-block;
+    text-decoration: none;
+    color: #fe2029;
+    padding: 4px 7px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+
+}
+
+
+a.active, .menu li a:hover {
+    
+    padding: 4px 7px;
+    border-bottom: solid 2px #fe2029;
+}
+i {
+    color: #fedc17;
+}
+
+ .open-menu i, .close-menu i {
+    color: #fe2029;
+}
+
+.open-menu, .close-menu {
+    position: absolute;
+    padding: 4px;
+    font-size: 30px;
+    color: #fe2029;
+    cursor: pointer;
+    display: none;
+}
+
+.open-menu {
+    top: 53%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 37px;
+    right: 22px;
+    transform: translateY(-50%);
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1009px){
+    nav .menu li a {
+        font-size: 18px;
+    }
+
+    .hero-content h2, .hero-content p {
+        font-size: 25px;
+    }  
+
+    
+}
+
+@media (max-width: 768px){
+    .logo a img{
+    font-size: 29px;
+    left: 8px;
+    }
+
+    .hide {
+        display: block;
+    }
+
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 80%;
+        height: 60vh;
+        background-color: #fedb17ee;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        transition: all 0.5s ease-in-out;
+        
+    }
+
+    nav .menu li {
+        margin-top: 10px;
+    }
+
+    nav .menu li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    a.active {
+        background: none;
+        color: #fe2029;
+        font-weight: bold;
+    }
+
+    .open-menu, .close-menu {
+        display: block;
+        
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+        
+    }
+}
+
+/* === hero section === */
+
+
+.hero {
+    background-image: url('../gallery/media/fire-hyd-wall.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: auto;
+    height: 85vh;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+   
+}
+
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #282828;
+    opacity: 0.6;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    top: 40%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 10%;
+    right: 10%;
+
+}
+
+
+.hero-content p {
+    color: #fedc17;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    top: 25%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+
+.hero .social-media a {
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    margin: 4px;
+    padding: 2px;
+    text-decoration: none;
+    color: #fe2029;
+}
+
+.hero .slogan p {
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    top: 90%;
+    right: 10%;
+    position: absolute;
+    margin: 2;
+    padding: 0;
+    text-transform: capitalise;
+    text-shadow: black 0 0 28px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;
+    
+}
+
+/* ===== span =====  */
+.intro {
+    color: #fe2029;
+    font-size: 19px;
+}
+
+.bolder {
+    color: #fedc17;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* ===== why chose us section =====  */
+
+
+.hero2 {
+    background-image: url('../gallery/media/fewall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #333333;
+    opacity: 0.7;
+}
+
+.hero2 p {
+    text-align: left;
+}
+
+/* ===== home about section =====  */
+
+.home-about {
+    background-color: #fe2029;
+}
+
+.bg-grey {
+    background: #fafafa;
+    color: #fe2029;
+}
+
+.btnx {
+    background-color: #fedc17;
+    font-weight: bold;
+    color: #fe2029;
+}
+
+.btnx:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #7c7c7c7c;
+
+}
+
+.hide {
+    display: none;
+}
+
+footer img {
+    height: 200px;
+}
+
+footer li {
+    text-decoration: none;
+}
+
+footer li a {
+    color: #eeeeee;
+    font-weight: 200;
+    
+}
+
+.border-right {
+    border-right: 2px solid #2a2a2a;
+}
