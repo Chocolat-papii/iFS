@@ -20,16 +20,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
-    color: #fe2029; /* Deep Gold for luxury feel */
+    color: #fe2029; 
 }
 
+.s-color {
+    color: #fedc17;
+    text-transform: capitalize;
+}
 
 /* Paragraph & Body Text */
 p {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-size: 18px;
-    color: #333; /* Soft white for readability */
+    color: #eeeeee; /* Soft white for readability */
 }
 
 /* === Navigation === */
@@ -148,7 +152,7 @@ i {
         position: fixed;
         width: 80%;
         height: 60vh;
-        background-color: #fedb17ee;
+        background-color: #838383ee;
         top: 0;
         right: -100%;
         z-index: 100;
@@ -285,12 +289,13 @@ i {
 
 
 .hero2 {
-    background-image: url('../gallery/media/fewall.jpg');
+    background-image: url('../gallery/media/hero2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
     isolation: isolate;
+    height: 20vh;
 }
 
 .hero2::after {
@@ -304,6 +309,33 @@ i {
 
 .hero2 p {
     text-align: left;
+}
+
+.hero3 {
+    background-image: url('../gallery/media/fewall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+}
+
+.hero4 {
+    background-image: url('../gallery/media/hero2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+}
+
+.hero4::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #333333;
+    opacity: 0.7;
 }
 
 /* ===== home about section =====  */
@@ -328,6 +360,7 @@ i {
     cursor: pointer;
     transform: scale(1.05);
     background: #7c7c7c7c;
+    color: #fedc17;
 
 }
 
@@ -350,5 +383,49 @@ footer li a {
 }
 
 .border-right {
-    border-right: 2px solid #2a2a2a;
+    border-right: 3px solid #2a2a2a;
+}
+
+.service-container {
+    border: 2px solid #fedc17;
+}
+
+.service-container p {
+    color: #eeeeee;
+}
+
+.img-height1 {
+    aspect-ratio: 16/9;
+}
+
+.red {
+    border-bottom: 1px solid #fe2029;
+}
+
+.border-yellow {
+    border-bottom: 2px solid #fedc17;
+}
+
+.m-right {
+    margin: 0 auto;
+}
+
+form {
+    max-width: 600px;
+    padding: 10px;
+    
+}
+
+.former1 {
+    background-color: #000;
+    padding: 10px;
+}
+
+.former {
+    background-color: #282828c7;
+    padding: 10px;
+}
+
+.bs-gray-800 {
+    background-color: #616161;
 }
