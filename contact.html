@@ -94,7 +94,7 @@
 
 
 
-        <section class="py-5" id="quote">
+        <section class="py-5" >
             <div class="container">
                 <div>
                     <h1>Need expert fire protection solutions?</h1>
@@ -105,16 +105,17 @@
                 </div>
 
                 <div>
-                    <form class="mx-auto" name="contact" method="POST" data-netlify="true" netlify action="/thank-you">
-                        <input class="form-control" type="hidden" name="form-name" value="contact">
-                        <input class="form-control mb-2" type="text" name="Name" placeholder="Your Name" required />
-                        <input class="form-control mb-2" type="email" name="Email" placeholder="Your Email" required />
-                        <input class="form-control mb-2" type="phone" name="Phone" placeholder="Contact Number" required />
-                        <input class="form-control mb-2" type="text" name="Company-name" placeholder="Company Name" required />
-                        <input class="form-control mb-2" type="text" name="Industry" placeholder="Industry" required />
-                        <input class="form-control mb-2" type="text" name="Location" placeholder="Region" required />
-                        <textarea class="form-control mb-2" name="message" placeholder="Your Message"
-                            required></textarea>
+                    <form class="mx-auto" id="quote" name="contact" method="POST" data-netlify="true" action="/thank-you">
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <input class="form-control mb-2" type="text" name="name" placeholder="Your Name" required />
+                        <input class="form-control mb-2" type="email" name="email" placeholder="Your Email" required />
+                        <input class="form-control mb-2" type="tel" name="phone" placeholder="Contact Number" required />
+                        <input class="form-control mb-2" type="text" name="companyName" placeholder="Company Name" required />
+                        <input class="form-control mb-2" type="text" name="industry" placeholder="Industry" required />
+                        <input class="form-control mb-2" type="text" name="location" placeholder="Region" required />
+                        
+                        <textarea class="form-control mb-2" name="message" placeholder="Your Message" required></textarea>
                         <button class="btn btnx px-4 w-100" type="submit">Send Enquiry</button>
                     </form>
 
@@ -157,7 +158,8 @@
             </div>
         </div>
         <p class="text-warning text-center mt-2">&copy;
-            <script>document.write(new Date().getFullYear());</script> Izingonyama Fire Services. All rights reserved.
+            <script>document.write(new Date().getFullYear());</script>
+             Izingonyama Fire Services. All rights reserved. Designed by <a class="text-decoration-none red1 " href="https://smconnect.co.za/" target="_blank">SMCONNECT</a>
         </p>
 
 
